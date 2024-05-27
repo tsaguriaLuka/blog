@@ -1,0 +1,107 @@
+@import "../fonts/index.css";
+@import "colors.css";
+@import "typograpghy.css";
+
+body {
+    background-color: #FAFAFA;
+}
+
+input {
+    width: 100%;
+    height: 48px;
+    padding: 12px 16px;
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+}
+
+.Blog__container {
+    display: flex;
+    gap: 24px;
+    position: relative;
+    top: 72px;
+    margin: auto;
+    width: fit-content;
+    z-index: 10;
+    min-height: 100vh;
+}
+
+.Blog__content {
+    padding: 40px 168px;
+    width: 1096px;
+    background-color: #FFFFFF;
+}
+
+.Blog__date {
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+    text-align: left;
+    color: var(--color-gray);
+    margin-top: 15px;
+}
+
+.Blog__actions {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.Blog__actions__field {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    cursor: pointer;
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.8px;
+    text-align: right;
+    color: var(--color-light-gray);
+}
+
+.Blog__actions__field img {
+    color: var(--color-gray);
+}
+
+.Blog__actions__field p {
+    color: var(--color-gray);
+    margin: 0;
+}
+
+.Blog__comments {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.Blog__comments-wrapper {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.Blog__comments-new {
+    display: flex;
+    gap: 16px;
+    padding-top: 8px;
+}
+
+.Blog__comments-new img {
+    width: 48px;
+    height: 48px;
+}
+
+.Blog__side {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
