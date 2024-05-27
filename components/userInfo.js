@@ -94,5 +94,5 @@ class UserInfo extends HTMLElement {
     }
 }
 
-customElements.define('user-info-el', UserInfo);
+customElements.define('el-user-info', UserInfo);
 

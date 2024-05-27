@@ -5,19 +5,19 @@ const template = document.createElement('template')
 
 template.innerHTML = `
     <style>
-        .commentReplay {
+        .Replay {
             display: flex;
             margin-top: 10px;
             border-left: 1px solid var(--color-border);
             padding-left: 8px;
         }
         
-        .commentReplay img {
+        .Replay img {
             width: 32px;
             height: 32px;
         }
         
-        .commentReplay .date {
+        .Replay .date {
             font-family: "Inter";
             font-size: 10px;
             font-weight: 400;
@@ -26,7 +26,7 @@ template.innerHTML = `
             color: var(--color-gray);
         }
         
-        .commentReplay__wrapper {
+        .Replay__wrapper {
             display: flex;
             flex-direction: column;
             gap: 4px;
@@ -34,7 +34,7 @@ template.innerHTML = `
             width: 100%;
         }     
        
-        .commentReplay .date {
+        .Replay .date {
             font-family: "Inter";
             font-size: 16px;
             font-weight: 400;
@@ -43,7 +43,7 @@ template.innerHTML = `
             color: var(--color-gray);
         }
         
-        .commentReplay .name {
+        .Replay .name {
             font-family: "Inter";
             font-size: 16px;
             font-weight: 600;
@@ -52,7 +52,7 @@ template.innerHTML = `
             color: var(--color-black);
         }
         
-        .commentReplay .text {
+        .Replay .text {
             font-family: "Inter";
             font-size: 16px;
             font-weight: 400;
@@ -61,7 +61,7 @@ template.innerHTML = `
             color: var(--color-black);
         }
         
-        .Actions__field {
+        .Replay__action {
             display: flex;
             gap: 6px;
             align-items: center;
@@ -74,20 +74,20 @@ template.innerHTML = `
             color: var(--color-light-gray);
         }
         
-        .Actions__field img {
+        .Replay__action img {
             color: var(--color-gray);
         }
         
-        .Actions__field p {
+        .Replay__action p {
             color: var(--color-gray);
             margin: 0;
         }
     </style>
         
-    <div class="commentReplay">
+    <div class="Replay">
         <img src="/assets/img/person.png" alt="image">
     
-            <div class="commentReplay__wrapper">
+            <div class="Replay__wrapper">
                 <div class="name">
                     <slot name="name">Default Name</slot>
                 </div>
@@ -95,9 +95,9 @@ template.innerHTML = `
                     <slot name="text">Default Text</slot>
                 </div>
     
-                <div class="Actions__field">
+                <div class="Replay__action">
                     <div
-                        class="Actions__field"
+                        class="Replay__action"
                         data-clicked="false"
                         data-model-click="handleLikeClick"
                     >
@@ -114,7 +114,7 @@ template.innerHTML = `
                         viewBox="0 0 20 20" 
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        class="Actions__field"
+                        class="Replay__action"
                         data-model-click="reply"
                     >
                         <path d="M8.17381 2.07938C8.58559 2.26199 8.85415 2.67378 8.85415 3.12495V5.41662H12.8646C16.345 5.41662 19.1666 8.23823 19.1666 11.7187C19.1666 15.7757 16.2484 17.5875 15.5788 17.9527C15.4892 18.0029 15.389 18.0208 15.2887 18.0208C14.8984 18.0208 14.5833 17.7021 14.5833 17.3154C14.5833 17.0468 14.7373 16.7998 14.9342 16.6171C15.2708 16.302 15.7291 15.6718 15.7291 14.5869C15.7291 12.6891 14.1894 11.1494 12.2916 11.1494H8.85415V13.441C8.85415 13.8922 8.58917 14.304 8.17381 14.4866C7.75844 14.6692 7.27863 14.594 6.94204 14.2932L1.21287 9.13699C0.972961 8.91499 0.833313 8.60704 0.833313 8.2812C0.833313 7.95535 0.972961 7.64741 1.21287 7.42898L6.94204 2.27273C7.27863 1.96837 7.76202 1.89318 8.17381 2.07938Z" fill="currentColor"/>
@@ -138,9 +138,9 @@ class CommentReply extends HTMLElement {
 
         this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-        const commentWrapper = this.shadowRoot.querySelector('.commentReplay__wrapper');
-        const likeButton = this.shadowRoot.querySelector('.Actions__field[data-model-click="handleLikeClick"]');
-        const replyButton = this.shadowRoot.querySelector('.Actions__field[data-model-click="reply"]');
+        const commentWrapper = this.shadowRoot.querySelector('.Replay__wrapper');
+        const likeButton = this.shadowRoot.querySelector('.Replay__action[data-model-click="handleLikeClick"]');
+        const replyButton = this.shadowRoot.querySelector('.Replay__action[data-model-click="reply"]');
 
         commentWrapper.id = uniqueCommentId;
 
@@ -151,4 +151,4 @@ class CommentReply extends HTMLElement {
     }
 }
 
-customElements.define('comment-reply-el', CommentReply);
+customElements.define('el-comment-reply', CommentReply);

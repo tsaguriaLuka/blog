@@ -17,11 +17,13 @@ const getElementById = (id) => {
 export const handlers = {
     hilightComment: (dataId) => {
         const parentEl = getElementByDataId(dataId)
+
         parentEl.parentNode.parentElement.style.background = 'var(--color-extra-light-gray)'
     },
 
     resetCommentHilight: (dataId) => {
         const parentEl = getElementByDataId(dataId)
+
         parentEl.parentNode.parentElement.style.background = 'none'
     },
 
@@ -53,7 +55,7 @@ export const handlers = {
         console.log(parentCommentId)
 
         if (parentCommentId) {
-            commentEl = document.createElement('comment-reply-el');
+            commentEl = document.createElement('el-comment-reply');
 
             commentEl.innerHTML = `
                 <span slot="name">Nesed Some user</span>
@@ -62,7 +64,7 @@ export const handlers = {
 
             container = getElementById(parentCommentId)
         } else {
-            commentEl = document.createElement('comment-el');
+            commentEl = document.createElement('el-comment');
 
             commentEl.innerHTML = `
                 <span slot="name">Some user</span>
