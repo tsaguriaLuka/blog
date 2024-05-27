@@ -28,8 +28,6 @@ export const querySelectorAllWithShadowRoots = (selector) => {
     return Array.from(elements);
 }
 
-
-
 export const setElementContent = (el, value) => {
     el.textContent = value;
 };

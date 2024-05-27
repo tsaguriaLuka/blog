@@ -53,8 +53,6 @@ export const handlers = {
         let commentEl;
         let container;
 
-        console.log(parentCommentId)
-
         if (parentCommentId) {
             commentEl = document.createElement('el-comment-reply');
 
@@ -81,7 +79,7 @@ export const handlers = {
         if (parentCommentId) handlers.resetCommentHilight(parentCommentId);
 
         sendCommentButton.removeAttribute('reply-to-id')
-        console.log(container);
+        
         container.appendChild(commentEl);
 
         comments.setValue('comments', 1)

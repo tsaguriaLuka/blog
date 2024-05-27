@@ -5,7 +5,7 @@ const callHandler = (funcName, id) => {
     try {
         handlers[funcName](id);
     } catch (error) {
-        console.error(`Function ${ funcName } is not defined`);
+        console.error(`Error in function: ${ funcName }`);
     }
 }
 
