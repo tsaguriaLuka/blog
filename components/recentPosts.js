@@ -3,12 +3,12 @@ const template = document.createElement('template')
 template.innerHTML = `
     <style>
         .RecentPosts {
-           padding: 32px;
-           border-radius: 8px;
-           width: 480px;
-           box-sizing: border-box;
-           height: 546px;
-           background-color: #FFFFFF;
+            padding: 32px;
+            border-radius: 8px;
+            max-width: 480px;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #FFFFFF;
         }
         
         .RecentPosts-title {
@@ -67,6 +67,12 @@ template.innerHTML = `
             line-height: 18.2px;
             text-align: left;
             color: var(--color-gray);
+        }
+        
+        @media (max-width: 968px) {
+            .RecentPosts {
+                max-width: 100%;
+            }
         }
     </style>
 

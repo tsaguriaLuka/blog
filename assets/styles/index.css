@@ -23,16 +23,31 @@ input {
     gap: 24px;
     position: relative;
     top: 72px;
-    margin: auto;
     width: fit-content;
     z-index: 10;
     min-height: 100vh;
+    margin: auto auto;
+    padding: 0 20px;
+    box-sizing: content-box;
+    max-width: 1600px;
 }
 
 .Blog__content {
     padding: 40px 168px;
-    width: 1096px;
+    max-width: 1096px;
     background-color: #FFFFFF;
+}
+
+.Blog__content img {
+    width: 100%;
+}
+
+.Blog__side {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: sticky;
+    top: 20px;
 }
 
 .Blog__date {
@@ -87,6 +102,8 @@ input {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    max-width: 702px;
+    overflow: auto;
 }
 
 .Blog__comments-new {
@@ -100,8 +117,58 @@ input {
     height: 48px;
 }
 
-.Blog__side {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+@media (max-width: 1700px) {
+    .Blog__content {
+        padding: 24px 80px;
+    }
+}
+
+@media (max-width: 1498px) {
+    .Blog__content {
+        padding: 24px 40px;
+    }
+}
+
+@media (max-width: 968px) {
+    .Blog__container {
+        flex-direction: column;
+    }
+
+    .Blog__date {
+        font-size: 14px;
+    }
+
+    .Blog__side {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 968px) {
+    .Blog__container {
+        flex-direction: column;
+    }
+
+    .Blog__side {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 700px) {
+    .Blog__side {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 700px) {
+    .Blog__content {
+        padding: 24px;
+    }
+
+    .Blog__side {
+        flex-direction: column;
+    }
+}
+
+* > {
+    outline: 1px solid red;
 }

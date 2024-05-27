@@ -14,3 +14,14 @@ p {
     text-align: left;
     margin: 40px 0;
 }
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 24px;
+        line-height: 24.44px;
+    }
+
+    p {
+        margin: 20px 0;
+    }
+}

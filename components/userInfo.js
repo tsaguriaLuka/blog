@@ -7,10 +7,9 @@ template.innerHTML = `
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            max-width: 479px;
-            max-height: 374px;
+            max-width: 480px;
+            min-width: 480px;
             width: 100%;
-            height: 100%;
             box-sizing: border-box;
             padding: 48px 133px;
             border-radius: 8px;
@@ -23,7 +22,6 @@ template.innerHTML = `
             margin-bottom: 16px;
         }
         
-        
         .UserInfo__name {
             margin-bottom: 12px;
             color: var(--color-black);
@@ -31,6 +29,7 @@ template.innerHTML = `
             font-size: 24px;
             font-weight: 500;
             line-height: 31.2px;
+            text-align: center;
         }
         
         .UserInfo__supporters {
@@ -50,9 +49,11 @@ template.innerHTML = `
         }
         
         .UserInfo button {
+            display: flex;
+            align-items: center;
             width: 164px;
             height: 56px;
-            padding: 16px 32px 16px 32px;
+            padding: 16px 32px;
             gap: 8px;
             border-radius: 8px;
             margin-top: 40px;
@@ -62,7 +63,64 @@ template.innerHTML = `
             font-size: 16px;
             font-weight: 400;
             line-height: 24px;
+            border: none;
             white-space: nowrap;
+        }
+        
+        @media (max-width: 1700px) {
+            .UserInfo {
+                padding: 32px 80px;
+            }
+            
+            .UserInfo img {
+                width: 80px;
+            }
+            
+            .UserInfo__name {
+                font-size: 20px;
+            }
+            
+            .UserInfo button {
+                margin-top: 32px;
+                height: 48px;
+            }
+        }
+        
+        @media (max-width: 1498px) {
+            .UserInfo {
+                padding: 24px 80px;
+                min-width: 380px;
+            }
+            
+            .UserInfo img {
+                width: 72px;
+            }
+            
+            .UserInfo__name {
+                font-size: 18px;
+            }
+            
+            .UserInfo button {
+                margin-top: 24px;
+                height: 40px;
+            }
+        }
+        
+        @media (max-width: 968px) {
+            .UserInfo {
+                position: sticky;
+                top: 80px;
+                min-width: auto;
+                
+            }
+        }
+        
+        @media (max-width: 700px) {
+            .UserInfo {
+                max-width: 100%;
+                position: relative;
+                top: 0;
+            }
         }
     </style>
         

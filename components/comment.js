@@ -7,6 +7,7 @@ template.innerHTML = `
     <style>
         .Comment {
             display: flex;
+            max-width: 320px;
         }
         
         .Comment img {
