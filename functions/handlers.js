@@ -1,10 +1,11 @@
-import { likes } from '../models/likes.js';
 import {
     querySelectorAllWithShadowRoots,
     updateRefView
 } from "../utils/domUtils.js";
 
-import { comments } from "../models/commentsCounter.js";
+import { likes } from '../refs/likes.js';
+import { comments } from "../refs/commentsCounter.js";
+
 
 const getElementByDataId = (id) => {
     return querySelectorAllWithShadowRoots(`[data-id="${ id }"]`)[0];
