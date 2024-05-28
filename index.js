@@ -15,7 +15,17 @@ const updateModelAndViewInput = (key, value) => {
     });
 };
 
+const ToggleCommentsWrapperVisibility = () => {
+    const commentsWrapper = document.querySelector('.Blog__comments-wrapper');
+
+    if (!commentsWrapper.children.length) return commentsWrapper.classList.add('hidden');
+
+    commentsWrapper.classList.remove('hidden');
+}
+
 const handleDOMChanges = () => {
+    ToggleCommentsWrapperVisibility();
+
     querySelectorAllWithShadowRoots('[data-model-click]').forEach(button => {
         button.removeEventListener('click', clickHandler);
         button.addEventListener('click', clickHandler);
