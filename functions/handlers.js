@@ -57,7 +57,7 @@ export const handlers = {
             commentEl = document.createElement('el-comment-reply');
 
             commentEl.innerHTML = `
-                <span slot="name">Nesed Some user</span>
+                <span slot="name">Replay: Some user</span>
                 <span slot="text">${ value }</span>
             `;
 
@@ -79,7 +79,7 @@ export const handlers = {
         if (parentCommentId) handlers.resetCommentHilight(parentCommentId);
 
         sendCommentButton.removeAttribute('reply-to-id')
-        
+
         container.appendChild(commentEl);
 
         comments.setValue('comments', 1)
